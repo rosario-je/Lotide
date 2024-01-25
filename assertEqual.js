@@ -7,10 +7,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("JOSE", "JOE");
-assertEqual("JOSE", "JOSE");
-assertEqual(2, 2);
-assertEqual(2, 3);
+assertEqual(true, false);
+assertEqual(true, true);
+assertEqual(false, false);
+
 
 
 
