@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function(text) {
+const head = function(array) {
   return text [0];
 }
 
