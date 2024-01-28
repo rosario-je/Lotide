@@ -23,17 +23,17 @@ const assertArraysEqual = (arr1, arr2) => {
 const flatten = (array)  => {
   let flatArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (!array.isArray(array[i])) {
+    if (!Array.isArray(array[i])) {
       flatArray.push(array[i]);
     } else {
       for (let j = 0; j < array[i].length; j++) {
-        if (!array.isArray(array[j])) {
-          flatArray.push(array[j]);
+          flatArray.push(array[i][j]);
         }
       }
     }
+    return flatArray;
   }
-  return flatArray;
-};
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), true); // => [1, 2, 3, 4, 5, 6]
+
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+
