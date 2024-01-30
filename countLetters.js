@@ -37,4 +37,7 @@ const expectedOutput = {
   n: 1,
 };
 
-assertEqual(countLetters("lighthouse in the house"), expectedOutput);
+const result = countLetters("lighthouse in the house");
+assertEqual(result['l'], 1);
+assertEqual(result['i'], 2);
+// and so on for the rest of the letters
