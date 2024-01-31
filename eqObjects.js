@@ -29,11 +29,15 @@ const eqObjects = (object1, object2) => {
   } else {
     //Checks for every key in both objects and compares them, if they are not the same, return false
     for (const key of keys1) {
-      if (keys1[key] !== keys2[key]) {
+      if (object1[key] !== object2[key]) {
         return false;
       } else {
-        if (Array.isArray(keys1[key]) && Array.isArray(keys2[key])){
-          eqArrays(keys1[key], keys2[key])
+        if (Array.isArray(keys1[key]) && Array.isArray(keys2[key])) {
+          if (eqArrays(keys1[key], keys2[key]) === true) {
+            return true;
+          } else {
+            return false;
+          }
         }
       }
     }
@@ -59,6 +63,6 @@ eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject); // => true
 // assertEquals(eqObjects(shirtObject , anotherShirtObject), true);
 
 /*Test Case 4 DATA STRUCTURE*/
-const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
+const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
 assertEquals(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
