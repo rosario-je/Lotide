@@ -29,16 +29,17 @@ const eqObjects = (object1, object2) => {
   } else {
     //Checks for every key in both objects and compares them, if they are not the same, return false
     for (const key of keys1) {
-      if (object1[key] !== object2[key]) {
-        return false;
+      if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+        if (!eqArrays(object1[key], object2[key])) {
+          return false;
+        }
       } else {
-        if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-          if (eqArrays(object1[key], object2[key]) === false) {
-            return false;
-          }
+        if (object1[key] !== object2[key]) {
+          return false;
         }
       }
     }
+  
     return true;
   }
 };
