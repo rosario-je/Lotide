@@ -6,6 +6,18 @@ const assertEquals = function(actual, expected) {
   }
 };
 
+const eqArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 const eqObjects = (object1, object2) => {
   //Creates a variable with an array containing all the keys in given object
   const keys1 = Object.keys(object1);
@@ -25,13 +37,13 @@ const eqObjects = (object1, object2) => {
   }
 };
 
-/*Test Case 1 PRIMITIVE*/
+// /*Test Case 1 PRIMITIVE*/
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 eqObjects(shirtObject , anotherShirtObject); // => true
 assertEquals(eqObjects(shirtObject , anotherShirtObject), true);
 
-/*Test Case 2 PRIMITIVE*/
+// /*Test Case 2 PRIMITIVE*/
 const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
 eqObjects(shirtObject , longSleeveShirtObject); // => false
 assertEquals(eqObjects(shirtObject , longSleeveShirtObject), false);
@@ -45,4 +57,4 @@ assertEquals(eqObjects(shirtObject , anotherShirtObject), true);
 /*Test Case 4 DATA STRUCTURE*/
 const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
-assertEquals(eqObjects(shirtObject , longSleeveShirtObject), false);
+assertEquals(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
