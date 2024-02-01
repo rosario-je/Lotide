@@ -39,8 +39,5 @@ const assertArraysEqual = (arr1, arr2) => {
 
 /*This callback function takes an array of words, and for every word, it returns the first letter of given word*/
 const results1 = map(words, word => word[0]);
-assertArraysEqual(results1[0],"g");
-assertArraysEqual(results1[1],"c");
-assertArraysEqual(results1[2],"t");
-assertArraysEqual(results1[3],"m");
-assertArraysEqual(results1[4],"t");
+
+assertArraysEqual(results1,[ 'g', 'c', 't', 'm', 't' ]);
