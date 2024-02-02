@@ -18,12 +18,16 @@ const findKey = (object, callback) => {
   }
 };
 
+/*CALLBACK FUNCTION*/
+const result1 = findKey(obj1, item => item.stars === 2) // => "noma"
 
-const result1 = findKey(obj1, (item) => {
-  return item.stars === 2
-}) // => "noma"
+/*---------------------------RESULT TEST CASES-----------------------------------*/
+const result2 = findKey(obj1, item => item.stars === 3) // => "Akaleri"
 
-console.log(result1);
+const result3 = findKey(obj1, item => item.stars === 1) // => "Blue Hill"
+/*--------------------------------------------------------------*/
+// console.log(result1);
+
 
 // Assert Equal
 const assertEqual = function(actual, expected) {
@@ -33,3 +37,8 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+/*---------------------------ASSERT EQUAL TEST CASES-----------------------------------*/
+assertEqual(result1, "noma");
+assertEqual(result2, "Akaleri");
+assertEqual(result3, "Blue Hill");
