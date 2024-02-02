@@ -7,13 +7,13 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 const takeUntil = function(array, callback) {
   const result = [];
   //For every item in the array
-  for (const number of array) {
+  for (const value of array) {
     //the callback function returns true for this number, return the results array
-    if (callback(number)) {
+    if (callback(value)) {
       return result;
     }
     //If the callback returns false, push said number **LOOK AT CALLBACK FUNCTION
-    result.push(number);
+    result.push(value);
   }
   return result;
 };
