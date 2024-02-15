@@ -17,7 +17,7 @@ const findKey = (object, callback) => {
     }
   }
 };
-
+module.exports = findKey;
 /*CALLBACK FUNCTION*/
 const result1 = findKey(obj1, item => item.stars === 2) // => "noma"
 
@@ -30,13 +30,7 @@ const result3 = findKey(obj1, item => item.stars === 1) // => "Blue Hill"
 
 
 // Assert Equal
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
 
 /*---------------------------ASSERT EQUAL TEST CASES-----------------------------------*/
 assertEqual(result1, "noma");
