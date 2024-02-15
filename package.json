@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@rosario-je/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/rosario-je/Lotide.git"
   },
-  "author": "",
+  "author": "Jose Eduardo Payamps",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rosario-je/Lotide/issues"
@@ -22,5 +22,6 @@
   "devDependencies": {
     "chai": "^4.3.1",
     "mocha": "^9.2.2"
-  }
+  },
+  "dependencies": {}
 }
