@@ -32,6 +32,6 @@ module.exports = {
   letterPositions: letterPositions,
   findKey: findKey,
   without: without,
-  takeUntil, takeUntil
+  takeUntil: takeUntil
   
 };
