@@ -17,7 +17,7 @@ const takeUntil = function(array, callback) {
   }
   return result;
 };
-
+module.exports = takeUntil
 /*CALLBACK FUNCTION*/
 //Call initial function to run through every item in data1, return true if the number is less than 0
 const results1 = takeUntil(data1, (item) => {
@@ -25,27 +25,9 @@ const results1 = takeUntil(data1, (item) => {
 });
 
 
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays')
 
-const assertArraysEqual = (arr1, arr2) => {
-  // Call eqArrays and print the appropriate message based on the result
-  let check = eqArrays(arr1, arr2);
-  if (check === true) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual')
 
 
 
