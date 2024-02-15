@@ -13,29 +13,12 @@ const map = function(array, callback) {
   return results;
 };
 
+module.exports = map;
 
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
 
 
-const assertArraysEqual = (arr1, arr2) => {
-  // Call eqArrays and print the appropriate message based on the result
-  let check = eqArrays(arr1, arr2);
-  if (check === true) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
 
 /*This callback function takes an array of words, and for every word, it returns the first letter of given word*/
 const results1 = map(words, word => word[0]);

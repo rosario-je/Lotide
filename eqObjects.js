@@ -1,22 +1,6 @@
-const assertEquals = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEquals = require('./assertEqual')
+const eqArrays = require('./eqArrays')
 
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
 const eqObjects = (object1, object2) => {
   //Creates a variable with an array containing all the keys in given object
@@ -43,6 +27,8 @@ const eqObjects = (object1, object2) => {
     return true;
   }
 };
+
+module.exports = eqObjects
 
 // // /*Test Case 1 PRIMITIVE*/
 // const shirtObject = { color: "red", size: "medium" };

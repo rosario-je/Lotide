@@ -1,24 +1,6 @@
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
 
-const assertArraysEqual = (arr1, arr2) => {
-  // Call eqArrays and print the appropriate message based on the result
-  let check = eqArrays(arr1, arr2);
-  if (check === true) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
 
 //iterate through sentence
 //error handle so if the word is not equal to space, continue the loop, if it is, just do nothing
@@ -41,6 +23,8 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
+
+module.exports = letterPositions;
 
 const array = "hello";
 
