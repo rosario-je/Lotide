@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 const tail = require('../tail')
-const assertEqual = require('../assertEqual')
+//const assertEqual = require('../assertEqual')
 
 describe("#Tail", () => {
     it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
