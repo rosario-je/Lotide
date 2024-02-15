@@ -11,7 +11,6 @@ const eqObjects = require('./eqObjects')
 const findKeyByValue = require('./findKeyByValue')
 const flatten = require('./flatten')
 const letterPositions = require('./letterPositions')
-const map = require('./map')
 
 
 module.exports = {
@@ -28,6 +27,5 @@ module.exports = {
   findKeyByValue: findKeyByValue,
   flatten: flatten,
   letterPositions: letterPositions,
-  map: map
   
 };
