@@ -12,5 +12,5 @@ assertEqual(true, true);
 assertEqual(false, false);
 
 
-
+module.exports = assertEqual;
 
